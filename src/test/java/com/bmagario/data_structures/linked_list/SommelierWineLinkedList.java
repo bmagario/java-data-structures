@@ -1,10 +1,13 @@
 package com.bmagario.data_structures.linked_list;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import com.bmagario.models.JsonMockData;
 import com.bmagario.models.Sommelier;
 import com.bmagario.models.Wine;
 import java.io.IOException;
 import java.util.List;
+import org.junit.jupiter.api.Test;
 
 public class SommelierWineLinkedList {
 
@@ -38,13 +41,41 @@ public class SommelierWineLinkedList {
         this.wines.remove(index);
     }
 
-    public static void main(String[] args) throws IOException {
+    @Test
+    public void testGetSommelier() throws IOException {
         SommelierWineLinkedList sommelierWineLinkedList = new SommelierWineLinkedList();
 
         Sommelier sommelier = sommelierWineLinkedList.getSommelier(0);
-        System.out.println(sommelier.getName());
+        assertEquals("Brian Magario", sommelier.getName());
+    }
+
+    @Test
+    public void testGetWine() throws IOException {
+        SommelierWineLinkedList sommelierWineLinkedList = new SommelierWineLinkedList();
 
         Wine wine = sommelierWineLinkedList.getWine(0);
-        System.out.println(wine.getName());
+        assertEquals("Cabernet Sauvignon", wine.getName());
+    }
+
+    @Test
+    public void testRemoveSommelier() throws IOException {
+        SommelierWineLinkedList sommelierWineLinkedList = new SommelierWineLinkedList();
+
+        Sommelier sommelierIndexOne = sommelierWineLinkedList.getSommelier(1);
+        sommelierWineLinkedList.removeSommelier(0);
+        Sommelier sommelierNewIndexZero = sommelierWineLinkedList.getSommelier(0);
+
+        assertEquals(sommelierNewIndexZero, sommelierIndexOne);
+    }
+
+    @Test
+    public void testRemoveWine() throws IOException {
+        SommelierWineLinkedList sommelierWineLinkedList = new SommelierWineLinkedList();
+
+        Wine wineIndexOne = sommelierWineLinkedList.getWine(1);
+        sommelierWineLinkedList.removeWine(0);
+        Wine wineNewIndexZero = sommelierWineLinkedList.getWine(0);
+
+        assertEquals(wineNewIndexZero, wineIndexOne);
     }
 }
