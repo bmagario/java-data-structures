@@ -1,4 +1,4 @@
-package com.bmagario.data_structures.queue.queue;
+package com.bmagario.data_structures.queue;
 
 public class Queue<T> {
 

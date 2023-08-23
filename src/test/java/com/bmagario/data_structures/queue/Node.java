@@ -1,4 +1,4 @@
-package com.bmagario.data_structures.queue.priority_queue;
+package com.bmagario.data_structures.queue;
 
 class Node<T> {
 

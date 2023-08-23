@@ -1,4 +1,4 @@
-package com.bmagario.data_structures.queue.priority_queue;
+package com.bmagario.data_structures.priority_queue;
 
 
 public class PriorityQueue<T extends Comparable<T>> {

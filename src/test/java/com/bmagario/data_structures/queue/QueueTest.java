@@ -1,4 +1,4 @@
-package com.bmagario.data_structures.queue.queue;
+package com.bmagario.data_structures.queue;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
