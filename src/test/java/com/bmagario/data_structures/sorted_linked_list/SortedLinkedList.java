@@ -14,7 +14,7 @@ public class SortedLinkedList<T extends Comparable<T>> {
         Node<T> currentNode = this.head;
         Node<T> previousNode = null;
 
-        while (currentNode != null && data.compareTo(currentNode.getData()) > 0) {
+        while (currentNode != null && data.compareTo(currentNode.getData()) >= 0) {
             previousNode = currentNode;
             currentNode = currentNode.getNext();
         }

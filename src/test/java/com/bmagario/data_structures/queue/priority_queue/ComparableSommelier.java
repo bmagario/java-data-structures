@@ -1,4 +1,4 @@
-package com.bmagario.data_structures.sorted_linked_list;
+package com.bmagario.data_structures.queue.priority_queue;
 
 import com.bmagario.models.Sommelier;
 

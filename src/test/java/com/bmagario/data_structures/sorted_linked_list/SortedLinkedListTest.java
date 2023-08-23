@@ -20,7 +20,7 @@ public class SortedLinkedListTest {
                 sommelier -> sommelierSortedLinkedList.add(new ComparableSommelier(sommelier)));
 
         ComparableSommelier sommelier = sommelierSortedLinkedList.get(0);
-        assertEquals("Elena Garcia", sommelier.getSommelier().getName());
+        assertEquals("Chloe Miller", sommelier.getSommelier().getName());
     }
 
     @Test
