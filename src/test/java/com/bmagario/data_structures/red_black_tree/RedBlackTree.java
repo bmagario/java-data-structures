@@ -24,11 +24,8 @@ public class RedBlackTree<T extends Comparable<T>> {
             node.setLeft(insert(node.getLeft(), newNode));
         } else if (compareResult > 0) {
             node.setRight(insert(node.getRight(), newNode));
-        } else {
-            // The data already exists in the tree.
         }
 
-        // Balance the tree.
         node = balance(node);
 
         return node;
@@ -110,12 +107,10 @@ public class RedBlackTree<T extends Comparable<T>> {
             } else if (compareResult > 0) {
                 node = node.getRight();
             } else {
-                // The data was found.
                 return true;
             }
         }
 
-        // The data was not found.
         return false;
     }
 
