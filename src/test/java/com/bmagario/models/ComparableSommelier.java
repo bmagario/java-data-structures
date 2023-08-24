@@ -1,6 +1,4 @@
-package com.bmagario.data_structures.priority_queue;
-
-import com.bmagario.models.Sommelier;
+package com.bmagario.models;
 
 public class ComparableSommelier implements Comparable<ComparableSommelier> {
     private Sommelier sommelier;
@@ -16,5 +14,12 @@ public class ComparableSommelier implements Comparable<ComparableSommelier> {
 
     public Sommelier getSommelier() {
         return sommelier;
+    }
+
+    @Override
+    public String toString() {
+        return "ComparableSommelier{" +
+                "sommelier=" + sommelier +
+                '}';
     }
 }

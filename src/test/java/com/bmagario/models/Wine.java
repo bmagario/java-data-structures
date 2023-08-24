@@ -1,5 +1,7 @@
 package com.bmagario.models;
 
+import java.util.Objects;
+
 public class Wine {
 
     private String name;
@@ -54,6 +56,27 @@ public class Wine {
 
     public void setFoodPairing(String foodPairing) {
         this.foodPairing = foodPairing;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Wine wine = (Wine) o;
+        return year == wine.year &&
+                Double.compare(wine.price, price) == 0 &&
+                Objects.equals(name, wine.name) &&
+                Objects.equals(grapeVariety, wine.grapeVariety) &&
+                Objects.equals(foodPairing, wine.foodPairing);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, grapeVariety, year, price, foodPairing);
     }
 
     @Override

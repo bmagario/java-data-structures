@@ -1,6 +1,4 @@
-package com.bmagario.data_structures.priority_queue;
-
-import com.bmagario.models.Wine;
+package com.bmagario.models;
 
 public class ComparableWine implements Comparable<ComparableWine> {
     private Wine wine;
@@ -16,5 +14,12 @@ public class ComparableWine implements Comparable<ComparableWine> {
 
     public Wine getWine() {
         return wine;
+    }
+
+    @Override
+    public String toString() {
+        return "ComparableWine{" +
+                "wine=" + wine +
+                '}';
     }
 }

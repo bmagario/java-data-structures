@@ -2,6 +2,8 @@ package com.bmagario.data_structures.sorted_linked_list;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.bmagario.models.ComparableSommelier;
+import com.bmagario.models.ComparableWine;
 import com.bmagario.models.JsonMockData;
 import com.bmagario.models.Sommelier;
 import com.bmagario.models.Wine;

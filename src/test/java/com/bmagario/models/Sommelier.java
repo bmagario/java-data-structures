@@ -2,6 +2,7 @@ package com.bmagario.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 public class Sommelier {
@@ -78,5 +79,38 @@ public class Sommelier {
             int randomIndex = random.nextInt(wines.size());
             sommelier.addWine(wines.get(randomIndex));
         });
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Sommelier sommelier = (Sommelier) o;
+        return age == sommelier.age &&
+                hasWonAward == sommelier.hasWonAward &&
+                Objects.equals(name, sommelier.name) &&
+                Objects.equals(expertise, sommelier.expertise) &&
+                Objects.equals(country, sommelier.country);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, expertise, age, hasWonAward, country);
+    }
+
+    @Override
+    public String toString() {
+        return "Sommelier{" +
+                "name='" + name + '\'' +
+                ", expertise='" + expertise + '\'' +
+                ", age=" + age +
+                ", hasWonAward=" + hasWonAward +
+                ", country='" + country + '\'' +
+                ", wines=" + wines +
+                '}';
     }
 }
