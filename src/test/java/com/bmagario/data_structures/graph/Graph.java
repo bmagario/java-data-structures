@@ -3,7 +3,7 @@ package com.bmagario.data_structures.graph;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Graph<T extends Comparable> {
+public class Graph<T extends Comparable<T>> {
 
     private List<Vertex<T>> vertices;
     private List<Edge<T>> edges;
